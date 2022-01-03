@@ -1,0 +1,31 @@
+{
+  "name": "bolt-app-template",
+  "version": "1.0.0",
+  "description": "App template for a quick start to new Slack apps",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "npx tsc -p .",
+    "build:watch": "npx tsc -w -p ./",
+    "start": "npm run build && node dist/app.js",
+    "start:watch": "npm run build:watch && node dist/app.js",
+    "localdev": "npx lt --port 3000 --subdomain $npm_config_subdomain"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbylerSFDC/bolt-app-template.git"
+  },
+  "author": "Donovan Byler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbylerSFDC/bolt-app-template/issues"
+  },
+  "homepage": "https://github.com/dbylerSFDC/bolt-app-template#readme",
+  "dependencies": {
+    "@slack/bolt": "^3.6.0",
+    "@types/node": "^16.7.9",
+    "dotenv": "^10.0.0",
+    "slack-block-builder": "^2.4.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2"
+  }
+}

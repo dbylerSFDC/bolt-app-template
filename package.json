@@ -6,7 +6,9 @@
   "scripts": {
     "build": "npx tsc -p .",
     "build:watch": "npx tsc -w -p ./",
-    "start": "npm run build && node dist/app.js",
+    "start": "npm run start:dev && npm run start:prod",
+    "start:dev": "ts-node -r tsconfig-paths/register src/app.ts",
+    "start:prod": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/app.js",
     "start:watch": "npm run build:watch && node dist/app.js",
     "localdev": "npx lt --port 3000 --subdomain $npm_config_subdomain"
   },

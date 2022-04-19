@@ -12,14 +12,26 @@
     "rootDir": "src",
     "outDir": "dist",
     "lib": ["ES2021"],
+    // Customize or add to these paths as needed
     "baseUrl": "src",
     "paths": {
-      "$components/*": ["views/components/components.ts"],
-      "$modals/*": ["views/modals"],
-      "$messages/*": ["views/messages"],
-      "$home-tab/*": ["views/home-tab"],
-      "$emojis/*": ["utilities/emojis.ts"],
-      "$constants/*": ["utilities/constants.ts"]
+      "$actions": ["actions"],
+      "$actions/*": ["actions/*"],
+
+      "$components": ["views/components"],
+      "$components/*": ["views/components/*"],
+
+      "$modals": ["views/modals"],
+      "$modals/*": ["views/modals/*"],
+
+      "$messages": ["views/messages"],
+      "$messages/*": ["views/messages/*"],
+
+      "$home": ["views/home"],
+      "$home/*": ["views/home/*"],
+
+      "$emojis": ["utilities/emojis.ts"],
+      "$constants": ["utilities/constants.ts"]
     }
   },
   "include": ["src/**/*"]

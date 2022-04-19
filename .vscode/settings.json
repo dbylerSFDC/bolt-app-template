@@ -1,0 +1,8 @@
+{
+    "exportall.config.folderListener": [
+        "/src/actions",
+        "/src/views/home",
+        "/src/views/messsages",
+        "/src/views/modals"
+    ]
+}

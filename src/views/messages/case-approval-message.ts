@@ -6,17 +6,20 @@ export class CaseApprovalMessage {
     app: App,
     channel: string,
     id?: string,
+    subject?: string,
     description?: string,
-    priority?: string
+    comments?: string
   ) {
     const message = Message();
     message.text("Hello World! ⚡️");
     message.blocks(
       Blocks.Section().text(
-        "*Request for Approval* \nDescription: " +
+        "*Request for Approval* \nSubject: " +
+          subject +
+          "\nDescription: " +
           description +
-          "\nPriority: " +
-          priority 
+          "\nComments: " +
+          comments
       ),
       Blocks.Actions().elements(
         Elements.Button()

@@ -10,7 +10,3 @@ export async function setApproval(id: string, action: string, comments: string) 
     console.log("response: ", res);
   });
 }
-
-export async function getApprovals() {
-
-}

@@ -28,6 +28,7 @@
     "dotenv": "^10.0.0",
     "jsforce": "^1.11.0",
     "querystring": "^0.2.1",
+    "request": "^2.88.2",
     "slack-block-builder": "^2.4.0",
     "ts-config": "^20.10.0",
     "ts-node": "^10.7.0",

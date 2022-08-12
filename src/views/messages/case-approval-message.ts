@@ -13,13 +13,13 @@ export class CaseApprovalMessage {
     const message = Message();
     message.text("Hello World! ⚡️");
     message.blocks(
-      Blocks.Section().text(
-        "*Request for Approval* \nSubject: " +
-          subject +
-          "\nDescription: " +
-          description +
-          "\nComments: " +
-          comments
+      Blocks.Section().text("*Request for Approval*\n<example.com|Link to Salesforce Case>"),
+      Blocks.Divider(),
+      Blocks.Section().fields(
+        "*Subject:*\n" + subject,
+        "*Description:*\n" + description,
+        "*Comments:*\n" + comments,
+        "*Dates Selected:*\n Oct 3 -6"
       ),
       Blocks.Actions().elements(
         Elements.Button()

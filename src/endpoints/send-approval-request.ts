@@ -1,6 +1,7 @@
 import { App, CustomRoute } from "@slack/bolt";
 import { CaseApprovalMessage } from "$messages/case-approval-message";
 import { parse } from "querystring";
+import { CustomHook } from "$actions";
 import { IncomingMessage, ServerResponse } from "http";
 
 export class SendApprovalRequest {

@@ -1,4 +1,6 @@
-# Trailblazer Ranch Slack App POC
+# bolt-app-template
+
+This repository is intended to be a quick jumping off point for any future Slack apps. It runs in Node with Typescript and uses Bolt to handle Slack API requests. 
 ### Naming convention:
  - Action files: feature name plus what the file does, separated by '-' (e.g. "project-setup-open")
  - File names: feature + optional context (e.g. "project-setup-open")

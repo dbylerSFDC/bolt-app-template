@@ -1,1 +1,1 @@
-export * from "./case-approval-message";
+export * from "./hello-world-message";

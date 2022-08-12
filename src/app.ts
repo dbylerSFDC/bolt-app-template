@@ -2,8 +2,7 @@ import dotenv from "dotenv";
 import { App } from "@slack/bolt";
 import { SlackActions } from "./slackActions";
 import SFDCConnection from "./salesforce/auth";
-import MarketingCloudConnection from "./salesforce/marketing-cloud/auth";
-import { SendApprovalRequest, Approved } from "endpoints";
+import { SendApprovalRequest } from "endpoints/send-approval-request";
 
 (async () => {
   dotenv.config();
@@ -21,13 +20,6 @@ import { SendApprovalRequest, Approved } from "endpoints";
           new SendApprovalRequest().handleRoute(app, req, res);
         },
       },
-      {
-        path: "/approved",
-        method: ["POST"],
-        handler: (req, res) => {
-          new Approved().handleRoute(app, req, res);
-        },
-      },
     ],
   });
 
@@ -40,5 +32,4 @@ import { SendApprovalRequest, Approved } from "endpoints";
     });
 
   await SFDCConnection.connectToSFDC();
-  // await MarketingCloudConnection.connectToSFDC();
 })();

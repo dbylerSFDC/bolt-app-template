@@ -1,1 +1,1 @@
-export * from "./approval-response-modal";
+export * from "./click-me";

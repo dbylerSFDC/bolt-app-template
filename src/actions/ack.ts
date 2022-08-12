@@ -1,6 +1,6 @@
 import { App } from "@slack/bolt";
 
-const actionIds = ["ack"];
+const actionIds = [""];
 
 export class AcknowledgeEvents {
   app: App;
